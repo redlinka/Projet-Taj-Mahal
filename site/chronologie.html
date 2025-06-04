@@ -22,7 +22,7 @@
       margin: 0 auto;
     }
 
-    h2 {
+    h1 {
       font-size: 2.8em;
       margin-bottom: 10px;
       text-align: left;
@@ -41,25 +41,21 @@
     }
 
     .event_left {
+      margin-top: 10em;
       display: flex;
+      width: 30%;
       flex-direction: column;
-      width: 50%;
-      background-color: rgba(255, 255, 255, 0.9);
       padding: 15px 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
       text-align: left;
+      float: left;
     }
 
     .event_right {
       display: flex;
+      width: 30%;
       flex-direction: column;
-      width: 50%;
-      background-color: rgba(255, 255, 255, 0.9);
-      padding: 15px 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
       text-align: left;
+      padding: 15px 20px;
       float: right;
     }
 
@@ -74,20 +70,21 @@
       margin: 0;
       color: #444;
     }
-    
+
     @media screen and (max-width: 768px) {
       .event_left,
       .event_right {
+        background-color: rgba(255, 255, 255);
         width: 90%;
         float: none;
         text-align: left;
       }
-    
-      h2 {
+
+      h1 {
         font-size: 2em;
         text-align: center;
       }
-    
+
       .subtitle {
         text-align: center;
       }
@@ -98,8 +95,9 @@
 <body>
   <main class="overlay">
     <div class="container">
-      <h2>Chronologie du Taj Mahal.</h2>
+      <h1>Chronologie du Taj Mahal.</h1>
       <p class="subtitle">De sa construction à nos jours, il a tenu malgré les tourments…</p>
+      <div class="timeline">
         <div class="event_right">
           <h3>1526 – Fondation de l’Empire moghol</h3>
           <p>Babur, descendant de Gengis Khan et de Tamerlan, fonde l’Empire moghol après sa victoire à la bataille de Panipat.</p>
@@ -149,6 +147,7 @@
           <h3>1983 – Inscription au patrimoine mondial de l’UNESCO</h3>
           <p>Le Taj Mahal est reconnu par l’UNESCO pour sa valeur universelle exceptionnelle.</p>
         </div>
+      </div>
     </div>
   </main>
 </body>
