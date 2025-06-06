@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Taj Mahal Unesco | Homepage</title>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baumans&family=Pixelify+Sans:wght@400..700&family=Ysabeau+SC:wght@1..1000&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://demo.plantpot.works/assets/css/normalize.css">
+    <link rel="stylesheet" href="https://use.typekit.net/opg3wle.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        
+        body {
+            margin: 0;
+            font-family: "cicle",Baumans;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #container {
+        display: flex;;
+        width: 100%;
+        height: 100vh;
+        min-height: 300px;
+        padding: 20px 0;
+        }
+        .box {
+        position: relative;
+        }
+        .btn-dropdown {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        background: #1d1c1b;
+        color: #fff;
+        font-size: 1.25rem;
+        outline: none;
+        cursor: pointer;
+        }
+        .btn-dropdown::after {
+        display: inline-block;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        width: 8px;
+        height: 8px;
+        margin-left: 10px;
+        border-right: 2px solid #FFF;
+        border-bottom: 2px solid #FFF;
+        vertical-align: 4px;
+        content: '';
+        }
+        .btn-dropdown:hover {
+        opacity: .9;
+        }
+        .nav-dropdown {
+        display: none;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        padding: 10px 0;
+        border-radius: 4px;
+        box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, .1);
+        background-color: #fff;
+        }
+        .nav-dropdown ul {
+        list-style-type: none;
+        }
+        .nav-dropdown ul li {
+        padding: 8px 0;
+        font-size: 18px;
+        text-align: center;
+        cursor: pointer;
+        }
+        .nav-dropdown ul li a {
+        display: block;
+        color: #3d3935;
+        text-decoration: none;
+        }
+        .nav-dropdown ul li:hover {
+        background-color: #20201f;
+        }
+        .nav-dropdown ul li:hover a {
+        color: #fff;
+        }
+        .nav-dropdown.is-open {
+        display: block;
+        }
+        .btn-dropdown.is-open::after {
+        -webkit-transform: rotate(-135deg);
+        transform: rotate(-135deg);
+        vertical-align: middle;
+        }
+        body {
+  margin: 0;
+  font-family: 'Dyno sans-serif';
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* SECTION 1 - Image de fond avec texte */
+.hero {
+  background-image: url('architecture-4749511_1280.jpg'); 
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-family: "cicle",Baumans;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-size: 7vw;
+  color: #fff;
+  text-align: center;
+  font-weight: 300;
+}
+
+/* SECTION 2 - Citation */
+.quote {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 3rem;
+  font-family: 'Dyno', cursive;
+  text-align: center;
+  font-family: "cicle",Baumans;
+}
+
+.quote blockquote {
+  font-size: 1.4rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.quote cite {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+/* SECTION 3 - Image pleine largeur */
+.image-section {
+  background-image: url('taj-mahal-sunset-4808224_1280.jpg'); 
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+}
+
+/* SECTION 4 - Contenu principal */
+.content {
+  padding: 3vw;
+  background-color: #fff;
+  text-align: justify;
+}
+
+.content h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.content p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+.history-section {
+            background-image: url('Fond_Histoire.png'); 
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            position: relative;
+            color: white;
+            text-align: center;
+            font-family: "cicle",Baumans;
+        }
+
+        .history-section h2 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .history-section p.subtitle {
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-bottom: 50px;
+        }
+
+        .history-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .history-card {
+            background-color: white;
+            color: #000;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s;
+        }
+
+        .history-card h3 {
+            padding: 20px;
+            font-size: 1.2rem;
+        }
+
+        .history-card .content {
+            display: none;
+            padding: 0 20px 20px;
+            font-size: 0.95rem;
+            text-align: justify;
+        }
+
+        .history-card.open .content {
+            display: block;
+        }
+
+        .toggle-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            color: #333;
+        }
+
+        .toggle-btn:hover {
+            background-color: #eee;
+        }
+
+        @media screen and (max-width: 960px) {
+            .history-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+    </style>
+</head>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var btn = document.getElementById("btn-dropdown");
+        var nav = document.getElementById("nav-dropdown");
+
+        btn.addEventListener('click', () => {
+            btn.classList.toggle("is-open");
+            nav.classList.toggle("is-open");
+        });
+    });
+</script>
+
+<body>
+    <section class="hero">
+        <div>
+          <h1>Le plus beau mausolée du monde...</h1>
+        </div>
+      </section>
+      <section class="quote">
+      <blockquote>
+        “Le Taj Mahal s'élève au-dessus des rives du fleuve comme une larme solitaire suspendue sur la joue du temps.”<br><br>
+        <cite>- Rabindranath Tagore</cite>
+      </blockquote>
+    </section>
+  
+    <section class="image-section">
+
+    </section>
+  
+    <section class="content">
+      <h2>Taj Mahal,<br>La Couronne du Palais…</h2>
+      <p>
+        Le Taj Mahal, situé à Agra, en Inde, est l'un des monuments les plus emblématiques au monde. Il représente un chef-d’œuvre d’architecture moghole, mêlant avec raffinement les influences persanes, ottomanes et indiennes. Son impressionnant dôme de marbre blanc se dresse au cœur de jardins soigneusement aménagés, entouré de fontaines et de pavillons annexes.
+      </p>
+      <p>
+        Inscrit au patrimoine mondial de l’UNESCO, le Taj Mahal attire chaque année des millions de visiteurs venus admirer sa beauté saisissante et sa charge émotionnelle.
+      </p>
+      <p>
+        Le monument est autant un joyau architectural qu'un symbole d’amour éternel. La légende de Shah Jahan construisant ce tombeau pour honorer la mémoire de Mumtaz Mahal ne fait qu’amplifier la magie qui entoure ce lieu hors du temps.
+      </p>
+    </section>
+    <section class="history-section">
+      <h2>Son histoire.</h2>
+      <p class="subtitle">Malgré les siècles, le monument semble figé dans le temps…</p>
+      <div class="history-cards">
+          <div class="history-card" id="card1">
+              <h3>La genèse du Taj Mahal</h3>
+              <p>Mumtaz Mahal, Femme de l’empereur Shah Jahan, meurt en 1631 en donnant naissance à leur quatorzième enfant. Cette perte bouleversa profondément l’empereur et devint le point de départ d’un projet monumental: un mausolé sans pareil pour honorer sa défunte épouse...
+              </p>
+              <div class="content">
+                  <p>L’histoire du Taj Mahal est intimement liée à celle de l’empire moghol, une des périodes les plus prospères et influentes de l’histoire indienne. Sous le règnede Shah Jahan, cinquième empereur de la dynastie moghole, le sous-continent atteignit un apogée culturel et architectural. Fils de Jahangir, Shah Jahan hérita d’un empire puissant et stable. Pourtant, sa vie fut marquée par des tragédies personnelles, notamment la perte de sa bien-aimée épouse, Mumtaz Mahal, qui mourut en 1631 en donnant naissance à leur quatorzième enfant. Cette perte bouleversa profondément l’empereur et devint le point de départ de son projet monumental.<br> Le contexte historique de cette période montre une convergence unique de richesse, de savoir-faire artistique et d’influences culturelles venues de Perse, d’Asie centrale et d’Inde, qui créèrent un environnement favorable à la construction de structures majestueuses comme le Taj Mahal.</p>
+              </div>
+              <button class="toggle-btn" onclick="toggleCard('card1')">▼</button>
+          </div>
+          <div class="history-card" id="card2">
+              <h3>Enjeux politiques et culturels</h3>
+              <p>Shah Jahan ne cherchait pas seulement à honorer la mémoire de Mumtaz Mahal, mais aussi à renforcer son propre prestige impérial.<br><br>
+                Le projet mobilisa les meilleurs architectes, artistes et artisans de l’époque recrutés non seulement en Inde, mais aussi dans les régions avoisinantes comme la Perse et l’Asie centrale…</p>
+              <div class="content">
+                <p>À travers la construction du Taj Mahal, il ne cherchait pas seulement à honorer la mémoire de Mumtaz Mahal, mais aussi à renforcer son propre prestige impérial. Le projet mobilisa les meilleurs architectes, artistes et artisans de l’époque recrutés non seulement en Inde, mais aussi dans les régions avoisinantes comme la Perse et l’Asie centrale. Les Moghols, grands mécènes des arts, voyaient dans l’architecture une manière de fusionner diverses traditions tout en affirmant leur vision universelle de la grandeur impériale.<br>En ce sens, le Taj Mahal représente aussi l’apogée du style moghol, qui marie harmonieusement les influences islamiques, persanes et hindoues. Ce projet colossal fut aussi une manière pour Shah Jahan de s’inscrire dans la continuité de ses ancêtres tout en surpassant leurs réalisations.</p> 
+              </div>
+              <button class="toggle-btn" onclick="toggleCard('card2')">▼</button>
+          </div>
+          <div class="history-card" id="card3">
+              <h3>déclin et redécouverte historique </h3>
+              <p>Au XVIIIe siècle, l’Inde connut des invasions et des conflits qui entraînèrent l’abandon progressif de nombreux monuments et le mausolée fut pillé à plusieurs reprises.<br><br>
+                À l’époque coloniale britannique, il suscita un regain d’intérêt en raison de son caractère exotique et romantique. Les travaux de restauration au XIXe siècle ont été menés pour préserver cet héritage culturel…</p>
+              <div class="content">
+                <p>L’histoire du Taj Mahal est aussi celle de son déclin et de sa redécouverte. Après la mort de Shah Jahan, l’empire moghol commença à s’affaiblir sous le règne de ses successeurs.<br>
+
+                  Au XVIIIe siècle, l’Inde connut des invasions et des conflits qui entraînèrent l’abandon progressif de nombreux monuments moghols, dont le Taj Mahal. Le mausolée fut pillé à plusieurs reprises, ses pierres précieuses et ses ornements en métaux précieux étant arrachés par des envahisseurs ou des dirigeants locaux. À l’époque coloniale britannique, le Taj Mahal suscita un regain d’intérêt en raison de son caractère exotique et romantique. Les Britanniques lancèrent des travaux de restauration au XIXe siècle pour préserver cet héritage culturel, mais ces interventions modifièrent parfois certains éléments de son apparence originale. <br>
+                  
+                  Aujourd’hui, le Taj Mahal est un témoin précieux de l’histoire tumultueuse de l’Inde, un monument qui incarne les gloires passées et les défis de la préservation du patrimoine dans un monde moderne.</p>  
+              </div>
+              <button class="toggle-btn" onclick="toggleCard('card3')">▼</button>
+          </div>
+      </div>
+  </section>
+
+  <script>
+      function toggleCard(id) {
+          const card = document.getElementById(id);
+          card.classList.toggle("open");
+      }
+  </script>
+  <!-- SECTION : Le couple impérial -->
+<section style="background-color: #f2f2f2; padding: 80px 20px;font-family: cicle,Baumans;">
+  <h2 style="font-size: 3rem; font-weight: 400; margin-bottom: 10px;">Le couple imperial.</h2>
+  <p style="font-size: 1.2rem; margin-bottom: 50px;">Qui sont ces deux monarques à l’origine du mausolée…</p>
+
+  <!-- SHAH JAHAN -->
+  <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px; margin-bottom: 80px;">
+      <img src="image_8.png" alt="Shah Jahan" style="max-width: 300px; border: 8px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+      <div style="flex: 1; min-width: 300px;">
+          <h3 style="font-size: 1.8rem;">Shah Jahan</h3>
+          <p style="font-size: 1rem; line-height: 1.6;">
+              5ᵉ Empereur de la Dynastie Moghole<br>
+              Règne : 1628 – 1658<br><br>
+              Né Shahab-ud-din Muhammad Shah Jahan, également connu sous les noms de Shah Jahan ou Shahjehan, il voit le jour le 5 janvier 1592 à Lahore (actuel Pakistan). Fils de l’empereur Jahângîr et de la princesse Manmati, il accède au trône en 1628 et règne pendant trois décennies marquées par la splendeur architecturale et culturelle de l’Empire moghol.<br><br>
+              Son règne est surtout célébré pour la construction du Taj Mahal, somptueux mausolée édifié à Agra en mémoire de sa bien-aimée épouse Mumtaz Mahal. C’est également là qu’il repose aujourd’hui, après son décès survenu le 22 janvier 1666 à l’âge de 74 ans.<br><br>
+              Il fut succédé par son fils Aurangzeb.<br>
+              Shah Jahan eut plusieurs épouses, dont Akbarabadi Mahal, Kandahari Mahal, Hasina Begum Sahiba, Muti Begum Sahiba, Qudsia Begum Sahiba, Fatehpuri Mahal, Sahiba, Sarhindi Begum Sahiba et Shrimati Manhbawathi Baji Lal Sahiba – mais Mumtaz Mahal demeure l’amour éternel auquel il dédia l’une des merveilles du monde.
+          </p>
+      </div>
+  </div>
+
+  <!-- MUMTAZ MAHAL -->
+  <div style="display: flex; flex-wrap: wrap-reverse; align-items: flex-start; gap: 30px;">
+      <div style="flex: 1; min-width: 300px;">
+          <h3 style="font-size: 1.8rem;">Mumtaz Mahal</h3>
+          <p style="font-size: 1rem; line-height: 1.6;">
+              Aussi surnommée “Exotic Beauty” par la population de l’Inde.<br><br>
+              Née Arjumand Banu Begum en avril 1593 à Agra, Mumtaz Mahal est célèbre non seulement pour sa beauté légendaire – surnommée Exotic Beauty par le peuple de l’Inde – mais aussi pour l’amour éternel que lui porta son époux, l’empereur Shah Jahan.<br><br>
+              Fille du noble persan Abdul Hasan Asaf Khan, elle appartenait à la dynastie moghole par sa naissance et par son mariage. Leur union fut marquée par une profonde affection et une grande complicité.<br><br>
+              Elle décède tragiquement le 17 juin 1631 à Burhanpur, alors qu’elle donnait naissance à leur quatorzième enfant. Son décès plongea l’empereur dans un profond deuil, inspirant la construction du Taj Mahal, chef-d’œuvre d’architecture dédié à sa mémoire.
+          </p>
+      </div>
+      <img src="image_9.png" alt="Mumtaz Mahal" style="max-width: 300px; border: 8px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+  </div>
+</section>
+
+<!-- SECTION : Les visiteurs remarquables -->
+<section style="background-image: url('taj-mahal-416809_1920_1.png'); background-size: cover; background-position: center; padding: 100px 20px; color: #000; position: relative;">
+  <div style=" padding: 60px 20px; font-family: cicle,Baumans;">
+      <h2 style="font-size: 3rem; font-weight: 400; text-align: center; margin-bottom: 30px;">Les visiteurs remarquables.</h2>
+      <div style="text-align: center; font-size: 2rem; font-family: cicle,Baumans;">⬇</div>
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 50px;font-family: cicle,Baumans;">
+          <div style="background: white; padding: 20px; max-width: 300px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);font-family: cicle,Baumans;">
+              <h3>Rabindranath Tagore</h3>
+              <p>
+                  Le lauréat du prix Nobel Rabindranath Tagore a poétiquement décrit le Taj Mahal comme :<br><br>
+                  <em>“UNE LARME SUR LA JOUE DU TEMPS.”</em><br><br>
+                  Sa métaphore saisit à la fois la beauté éthérée du monument et la tristesse qui a inspiré sa construction.
+              </p>
+          </div>
+          <div style="background: white; padding: 20px; max-width: 300px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+              <h3>Princesse Diana</h3>
+              <p>
+                  En 1992, elle a posé seule sur le banc de marbre (aujourd’hui appelé “banc de Diana”).<br><br>
+                  Bien qu’elle ne l’ait pas dit publiquement à l’époque, elle en a parlé plus tard comme :<br><br>
+                  <em>“UNE EXPÉRIENCE CURATIVE”.</em>
+              </p>
+          </div>
+          <div style="background: white; padding: 20px; max-width: 300px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+              <h3>Mark Twain</h3>
+              <p>
+                  L’écrivain américain Mark Twain a visité le Taj Mahal à la fin du XIXᵉ siècle et a été frappé par sa majesté.<br><br>
+                  <em>“ON NE PEUT PAS DIRE QU’IL EST BEAU. IL DÉFIE LES MOTS. C’EST LE SPECTACLE D’UN RÊVE.”</em><br>
+                  — Twain, Following the Equator
+              </p>
+          </div>
+      </div>
+  </div>
+</section>
+
+</body>
+
+</html>
