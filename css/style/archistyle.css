@@ -1,0 +1,107 @@
+body {
+    font-family: 'ABeeZee', sans-serif;
+    margin: 0;
+    background-image: url('../img/fond_architecture.png');
+    background-size: cover;
+}
+
+.titre {
+    margin-left: 13rem;
+    margin-bottom: 30rem;
+}
+.titre h1 {
+    font-size: 8rem;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+.titre p {
+    margin-top: 0;
+    font-size: 2rem;
+    font-style: italic;
+}
+.contenu {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.column-left, .column-right {
+    width: 35%;
+}
+.up,.down {
+    background-color: #f0f0f0;
+    padding: 4rem;
+}
+.up {
+    margin-top: 25rem;
+}
+.down {
+    margin-bottom: 25rem;
+}
+.up h2, .down h2 {
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin-top: 0;
+}
+.up p, .down p {
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .titre {
+        margin-left: 5rem;
+        margin-bottom: 15rem;
+    }
+    .titre h1 {
+        font-size: 5rem;
+    }
+    .column-left, .column-right {
+        width: 45%;
+    }
+    .up, .down {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .titre {
+        margin-left: 2rem;
+        margin-bottom: 8rem;
+    }
+    .titre h1 {
+        font-size: 3rem;
+    }
+    .titre p {
+        font-size: 1.2rem;
+    }
+    .contenu {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .column-left, .column-right {
+        width: 90%;
+    }
+    .up, .down {
+        padding: 1.5rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .titre {
+        margin-left: 1rem;
+        margin-bottom: 4rem;
+    }
+    .titre h1 {
+        font-size: 2rem;
+    }
+    .up h2, .down h2 {
+        font-size: 1.2rem;
+    }
+    .up p, .down p {
+        font-size: 1rem;
+    }
+}
