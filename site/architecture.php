@@ -9,9 +9,11 @@
     <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style/archistyle.css">
     <title>Architecture | Taj Mahal</title>
-</head>
-<body>
+    <link rel="stylesheet" href="../css/style/headerstyle.css">
+
+    <?php include_once 'includes/header.php'; ?>
     
+    <!-- Main content -->
 <section class="titre">
     <h1>Architecture.</h1>
     <p>De sa contruction a nos jours, il a tenu<br>malgrès les tumultes...</p>

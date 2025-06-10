@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.getElementById("btn-dropdown");
+    var nav = document.getElementById("nav-dropdown");
 
+    btn.addEventListener('click', () => {
+      btn.classList.toggle("is-open");
+      nav.classList.toggle("is-open");
+    });
+  });
+</script>
 <head>
   <title>Accueil | Taj Mahal</title>
   <meta charset="utf-8">
@@ -13,21 +23,12 @@
   <link rel="stylesheet" type="text/css" href="https://demo.plantpot.works/assets/css/normalize.css">
   <link rel="stylesheet" href="https://use.typekit.net/opg3wle.css">
   <link rel="stylesheet" href="../css/style/accueilstyle.css">
+  <link rel="stylesheet" href="../css/style/headerstyle.css">
+  <link rel="stylesheet" href="../css/style/footerstyle.css">
     
-</head>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    var btn = document.getElementById("btn-dropdown");
-    var nav = document.getElementById("nav-dropdown");
+  <?php include_once 'includes/header.php'; ?>
 
-    btn.addEventListener('click', () => {
-      btn.classList.toggle("is-open");
-      nav.classList.toggle("is-open");
-    });
-  });
-</script>
-
-<body>
+  <!-- Main content -->
   <section class="hero">
     <div>
       <h1>Le plus beau mausolée du monde...</h1>
