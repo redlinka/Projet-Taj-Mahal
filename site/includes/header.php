@@ -113,12 +113,12 @@
       <input type="text" placeholder="rechercher..." />
     </div>
     <ul>
-      <li>Accueil</li>
-      <li>Introduction</li>
-      <li>▶ Histoire</li>
-      <li>Architecture</li>
-      <li>Accessibilité</li>
-      <li>Contact</li>
+    <li><a href="/site/accueil.php" style="color: inherit; text-decoration: none;">Accueil</a></li>
+    <li><a href="/site/accueil.php#introduction" style="color: inherit; text-decoration: none;">Introduction</a></li>
+    <li><a href="/site/accueil.php#histoire" style="color: inherit; text-decoration: none;">Histoire</a></li>
+    <li><a href="/site/architecture.php" style="color: inherit; text-decoration: none;">Architecture</a></li>
+    <li><a href="/site/accessibilite.php" style="color: inherit; text-decoration: none;">Accessibilité</a></li>
+    <li><a href="/site/contact.php" style="color: inherit; text-decoration: none;">Contact</a></li>
     </ul>
   </div>
 
