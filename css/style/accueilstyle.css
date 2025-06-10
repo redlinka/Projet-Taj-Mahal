@@ -85,7 +85,7 @@ body {
 
     /* SECTION 1 - Image de fond avec texte */
     .hero {
-      background-image: url('../css/img/architecture-4749511_1280.jpg'); 
+      background-image: url('../img/architecture-4749511_1280.jpg'); 
       background-size: cover;
       background-position: center;
       height: 100vh;
@@ -132,7 +132,7 @@ body {
 
     /* SECTION 3 - Image pleine largeur */
     .image-section {
-      background-image: url('../css/img/taj-mahal-sunset-4808224_1280.jpg'); 
+      background-image: url('../img/taj-mahal-sunset-4808224_1280.jpg'); 
       background-size: cover;
       background-position: center;
       height: 60vh;
@@ -156,7 +156,7 @@ body {
       font-size: 1rem;
     }
     .history-section {
-      background-image: url('../css/img/Fond_Histoire.png'); 
+      background-image: url('../img/Fond_Histoire.png'); 
       background-size: cover;
       background-position: center;
       padding: 80px 20px;
@@ -280,7 +280,7 @@ body {
 
     /* SECTION : Les visiteurs remarquables */
     .visitors-section {
-      background-image: url('../css/img/taj-mahal-416809_1920_1.png');
+      background-image: url('../img/taj-mahal-416809_1920_1.png');
       background-size: cover;
       background-position: center;
       padding: 100px 20px;
