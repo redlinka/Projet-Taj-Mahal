@@ -45,7 +45,7 @@
 
   </section>
   
-  <section class="introduction" id="introduction">
+  <section class="content" id="introduction">
     <h2>Taj Mahal,<br>La Couronne du Palais…</h2>
     <p>
     Le Taj Mahal, situé à Agra, en Inde, est l'un des monuments les plus emblématiques au monde. Il représente un chef-d’œuvre d’architecture moghole, mêlant avec raffinement les influences persanes, ottomanes et indiennes. Son impressionnant dôme de marbre blanc se dresse au cœur de jardins soigneusement aménagés, entouré de fontaines et de pavillons annexes.
@@ -57,7 +57,7 @@
     Le monument est autant un joyau architectural qu'un symbole d’amour éternel. La légende de Shah Jahan construisant ce tombeau pour honorer la mémoire de Mumtaz Mahal ne fait qu’amplifier la magie qui entoure ce lieu hors du temps.
     </p>
   </section>
-  <section class="histoire" id="histoire">
+  <section class="history-section" id="histoire">
 
     <h2>Son histoire.</h2>
     <p class="subtitle">Malgré les siècles, le monument semble figé dans le temps…</p>
@@ -105,7 +105,7 @@
     }
   </script>
   <!-- SECTION : Le couple impérial -->
-<section class="couple" id="couple">
+<section class="imperial-section" id="couple">
   <h2 class="imperial-title">Le couple imperial.</h2>
   <p class="imperial-subtitle">Qui sont ces deux monarques à l’origine du mausolée…</p>
 
@@ -141,7 +141,7 @@
 </section>
 
 <!-- SECTION : Les visiteurs remarquables -->
-<section class="visiteurs" id="visiteurs">
+<section class="visitors-section" id="visiteurs">
   <div class="visitors-inner">
     <h2 class="visitors-title">Les visiteurs remarquables.</h2>
     <div class="visitors-arrow">⬇</div>
