@@ -3,96 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Chronologie du Taj Mahal</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: url("Fond_Frise_Chronologique.png") no-repeat center top;
-      background-size: cover;
-      color: #000;
-    }
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Pixelify+Sans:wght@400..700&family=Ysabeau+SC:wght@1..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style/chronologiestyle.css">
+  <link rel="stylesheet" href="../css/style/headerstyle.css">
+  <link rel="stylesheet" href="../css/style/footerstyle.css">
 
-    main {
-      padding: 60px 0;
-    }
+  <?php include_once 'includes/header.php'; ?>
 
-    .container {
-      width: 90%;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
+<!-- Main content -->
 
-    h1 {
-      font-size: 2.8em;
-      margin-bottom: 10px;
-      text-align: left;
-    }
-
-    .subtitle {
-      font-style: italic;
-      margin-bottom: 40px;
-      color: #333;
-    }
-
-    .timeline {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px 60px;
-    }
-
-    .event_left {
-      margin-top: 10em;
-      display: flex;
-      width: 30%;
-      flex-direction: column;
-      padding: 15px 20px;
-      text-align: left;
-      float: left;
-    }
-
-    .event_right {
-      display: flex;
-      width: 30%;
-      flex-direction: column;
-      text-align: left;
-      padding: 15px 20px;
-      float: right;
-    }
-
-    h3 {
-      font-size: 1.2em;
-      margin: 0 0 10px 0;
-      color: #2a2a2a;
-    }
-
-    p {
-      font-size: 1em;
-      margin: 0;
-      color: #444;
-    }
-
-    @media screen and (max-width: 768px) {
-      .event_left,
-      .event_right {
-        background-color: rgba(255, 255, 255);
-        width: 90%;
-        float: none;
-        text-align: left;
-      }
-
-      h1 {
-        font-size: 2em;
-        text-align: center;
-      }
-
-      .subtitle {
-        text-align: center;
-      }
-    }
-
-  </style>
-</head>
-<body>
   <main class="overlay">
     <div class="container">
       <h1>Chronologie du Taj Mahal.</h1>
