@@ -1,0 +1,23 @@
+\Titre\
+Who are we ?
+About the developers of this website…
+
+\Objectif\
+The goal of this project
+This website was produced as part of a university project in partnership with UNESCO. It is part of an exercise to put us in a Professional situation, aimed at developing our skills in project management, digital communication, accesibility and cultural mediation. Our aim is to offer a clear, accessible and enriching platform for all audiences - travelers, the curious researchers or simple history buffs - wishing to discover the Taj Mahal in a different way, whether before, during or after their visit.
+
+\Equipe\
+ESSAIDI Rayan
+Content development and research
+
+MUSY Loane
+Communication manager
+
+SISSOKO Bakary
+Content development and research
+
+PERES Yanis
+Content development and planning manager
+
+NACHNOUCHI Adam
+In charge of site upload, content development and research
