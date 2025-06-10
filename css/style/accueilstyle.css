@@ -1,0 +1,318 @@
+body {
+      margin: 0;
+      font-family: "ABeeZee", Arial, sans-serif;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-color: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    #container {
+      display: flex;
+      width: 100%;
+      height: 100vh;
+      min-height: 300px;
+      padding: 20px 0;
+    }
+    .box {
+      position: relative;
+    }
+    .btn-dropdown {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      background: #1d1c1b;
+      color: #fff;
+      font-size: 1.25rem;
+      outline: none;
+      cursor: pointer;
+    }
+    .btn-dropdown::after {
+      display: inline-block;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      width: 8px;
+      height: 8px;
+      margin-left: 10px;
+      border-right: 2px solid #FFF;
+      border-bottom: 2px solid #FFF;
+      vertical-align: 4px;
+      content: '';
+    }
+    .btn-dropdown:hover {
+      opacity: .9;
+    }
+    .nav-dropdown {
+      display: none;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      right: 0;
+      padding: 10px 0;
+      border-radius: 4px;
+      box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, .1);
+      background-color: #fff;
+    }
+    .nav-dropdown ul {
+      list-style-type: none;
+    }
+    .nav-dropdown ul li {
+      padding: 8px 0;
+      font-size: 18px;
+      text-align: center;
+      cursor: pointer;
+    }
+    .nav-dropdown ul li a {
+      display: block;
+      color: #3d3935;
+      text-decoration: none;
+    }
+    .nav-dropdown ul li:hover {
+      background-color: #20201f;
+    }
+    .nav-dropdown ul li:hover a {
+      color: #fff;
+    }
+    .nav-dropdown.is-open {
+      display: block;
+    }
+    .btn-dropdown.is-open::after {
+      -webkit-transform: rotate(-135deg);
+      transform: rotate(-135deg);
+      vertical-align: middle;
+    }
+
+    /* SECTION 1 - Image de fond avec texte */
+    .hero {
+      background-image: url('../css/img/architecture-4749511_1280.jpg'); 
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      font-family: "cicle",Baumans;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 2rem;
+      border-radius: 10px;
+    }
+
+    .hero h1 {
+      font-size: 7vw;
+      color: #fff;
+      text-align: center;
+      font-weight: 300;
+    }
+
+    /* SECTION 2 - Citation */
+    .quote {
+      background-color: #1a1a1a;
+      color: #fff;
+      padding: 3rem;
+      text-align: center;
+      font-family: "Ysabeau SC", sans-serif;
+    }
+
+    .quote blockquote {
+      font-size: 1.4rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .quote cite {
+      display: block;
+      margin-top: 1rem;
+      font-size: 1rem;
+    }
+
+    /* SECTION 3 - Image pleine largeur */
+    .image-section {
+      background-image: url('../css/img/taj-mahal-sunset-4808224_1280.jpg'); 
+      background-size: cover;
+      background-position: center;
+      height: 60vh;
+    }
+
+    /* SECTION 4 - Contenu principal */
+    .content {
+      padding: 3vw;
+      background-color: #fff;
+      text-align: justify;
+    }
+
+    .content h2 {
+      font-size: 2rem;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+    }
+
+    .content p {
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+    }
+    .history-section {
+      background-image: url('../css/img/Fond_Histoire.png'); 
+      background-size: cover;
+      background-position: center;
+      padding: 80px 20px;
+      position: relative;
+      color: white;
+      text-align: center;
+      font-family: "ABeeZee", Arial, sans-serif;
+    }
+
+    .history-section h2 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .history-section p.subtitle {
+      font-style: italic;
+      font-size: 1.2rem;
+      margin-bottom: 50px;
+    }
+
+    .history-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .history-card {
+      background-color: white;
+      color: #000;
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.3s;
+    }
+
+    .history-card h3 {
+      padding: 20px;
+      font-size: 1.2rem;
+    }
+
+    .history-card .content {
+      display: none;
+      padding: 0 20px 20px;
+      font-size: 0.95rem;
+      text-align: justify;
+    }
+
+    .history-card.open .content {
+      display: block;
+    }
+
+    .toggle-btn {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 10px;
+      width: 100%;
+      text-align: center;
+      color: #333;
+    }
+
+    .toggle-btn:hover {
+      background-color: #eee;
+    }
+
+    @media screen and (max-width: 960px) {
+      .history-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    /* SECTION : Le couple impérial */
+    .imperial-section {
+      background-color: #f2f2f2;
+      padding: 80px 20px;
+      font-family: "ABeeZee", Arial, sans-serif;
+    }
+    .imperial-title {
+      font-size: 3rem;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+    .imperial-subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 50px;
+    }
+    .imperial-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 30px;
+      margin-bottom: 80px;
+    }
+    .imperial-row-reverse {
+      display: flex;
+      flex-wrap: wrap-reverse;
+      align-items: flex-start;
+      gap: 30px;
+    }
+    .imperial-img {
+      max-width: 300px;
+      border: 8px solid white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .imperial-col {
+      flex: 1;
+      min-width: 300px;
+    }
+    .imperial-h3 {
+      font-size: 1.8rem;
+    }
+    .imperial-p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    /* SECTION : Les visiteurs remarquables */
+    .visitors-section {
+      background-image: url('../css/img/taj-mahal-416809_1920_1.png');
+      background-size: cover;
+      background-position: center;
+      padding: 100px 20px;
+      color: #000;
+      position: relative;
+    }
+    .visitors-inner {
+      padding: 60px 20px;
+      font-family: "ABeeZee", Arial, sans-serif;
+    }
+    .visitors-title {
+      font-size: 3rem;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .visitors-arrow {
+      text-align: center;
+      font-size: 2rem;
+      font-family: "ABeeZee", Arial, sans-serif;
+    }
+    .visitors-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 50px;
+      font-family: "ABeeZee", Arial, sans-serif;
+    }
+    .visitors-card {
+      background: white;
+      padding: 20px;
+      max-width: 300px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
