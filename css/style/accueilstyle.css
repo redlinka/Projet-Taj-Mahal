@@ -259,6 +259,7 @@ body {
       display: flex;
       flex-wrap: wrap-reverse;
       align-items: flex-start;
+      background-color: #1a1a1a;
       gap: 30px;
     }
     .imperial-img {
