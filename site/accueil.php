@@ -73,7 +73,7 @@
         <button class="toggle-btn" onclick="toggleCard('card1')">▼</button>
       </div>
 
-      <div class="history-card-" id="card2">
+      <div class="history-card" id="card2">
         <h3>Enjeux politiques et culturels</h3>
         <p>Shah Jahan ne cherchait pas seulement à honorer la mémoire de Mumtaz Mahal, mais aussi à renforcer son propre prestige impérial.<br><br>
         Le projet mobilisa les meilleurs architectes, artistes et artisans de l’époque recrutés non seulement en Inde, mais aussi dans les régions avoisinantes comme la Perse et l’Asie centrale…</p>
@@ -83,7 +83,7 @@
         <button class="toggle-btn" onclick="toggleCard('card2')">▼</button>
       </div>
 
-      <div class="history-card-" id="card3">
+      <div class="history-card" id="card3">
         <h3>déclin et redécouverte historique </h3>
         <p>Au XVIIIe siècle, l’Inde connut des invasions et des conflits qui entraînèrent l’abandon progressif de nombreux monuments et le mausolée fut pillé à plusieurs reprises.<br><br>
         À l’époque coloniale britannique, il suscita un regain d’intérêt en raison de son caractère exotique et romantique. Les travaux de restauration au XIXe siècle ont été menés pour préserver cet héritage culturel…</p>
