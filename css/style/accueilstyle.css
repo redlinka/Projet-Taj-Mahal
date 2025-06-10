@@ -207,7 +207,7 @@ body {
       text-align: justify;
     }
 
-    .history-card.open .content {
+    .history-card-1.open .content {
       display: block;
     }
 
