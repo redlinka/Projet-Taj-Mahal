@@ -134,7 +134,7 @@
       }
     }
   </style>
-</head>
+  <?php include_once '../includes/header.php'; ?>
 
 <body>
   <section class="hero">
