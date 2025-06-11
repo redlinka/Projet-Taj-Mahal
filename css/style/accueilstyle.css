@@ -132,10 +132,10 @@ body {
 
     /* SECTION 3 - Image pleine largeur */
     .image-section {
-      background-image: url('../img/taj-mahal-sunset-4808224_1280.jpg'); 
+      background-image: url('../img/Fond_Introduction.png'); 
       background-size: cover;
       background-position: center;
-      height: 60vh;
+      height: 120vh;
     }
 
     /* SECTION 4 - Contenu principal */
