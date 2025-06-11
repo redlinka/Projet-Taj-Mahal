@@ -1,4 +1,3 @@
-<?php include 'includes/cnx.php';?>
 </head>
 <body>
 
