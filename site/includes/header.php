@@ -21,7 +21,7 @@
     <li><a href="/site/accueil.php#histoire" style="color: inherit; text-decoration: none;">Histoire</a></li>
     <li><a href="/site/architecture.php" style="color: inherit; text-decoration: none;">Architecture</a></li>
     <li><a href="/site/accessibilite.php" style="color: inherit; text-decoration: none;">Accessibilité</a></li>
-    <li><a href="/site/contact.php" style="color: inherit; text-decoration: none;">Contact</a></li>
+    <li><a href="/site/credits.php" style="color: inherit; text-decoration: none;">Crédits</a></li>
     </ul>
   </div>
 
