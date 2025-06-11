@@ -28,12 +28,12 @@
           <p>Shah Jahan épouse Arjumand Banu Begum, plus tard connue sous le nom de Mumtaz Mahal, qui deviendra l’inspiration du Taj Mahal.</p>
         </div>
 
-        <div class="event_left">
+        <div class="event_right">
           <h3>1628 – Accession au trône de Shah Jahan</h3>
           <p>Shah Jahan devient empereur moghol après avoir consolidé son pouvoir et remporté plusieurs campagnes militaires.</p>
         </div>
         
-        <div class="event_right">
+        <div class="event_left">
           <h3>1631 – Décès de Mumtaz Mahal</h3>
           <p>Mumtaz Mahal décède en donnant naissance à leur 14e enfant. Son décès marque le début de la conception du Taj Mahal.</p>
         </div>
