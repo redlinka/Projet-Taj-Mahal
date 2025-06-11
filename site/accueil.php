@@ -26,12 +26,16 @@
   <link rel="stylesheet" href="../css/style/headerstyle.css">
   <link rel="stylesheet" href="../css/style/footerstyle.css">
     
-  <?php include_once 'includes/header.php'; ?>
-
+  <?php 
+  include_once 'includes/header.php'; 
+  include 'includes/cnx.php';
+  $stmt = $cnx->query("SELECT nom_section FROM section WHERE code_section = 'TTLHOME'");
+  ?>
   <!-- Main content -->
   <section class="hero">
     <div>
       <h1>Le plus beau mausolée du monde...</h1>
+ <?php echo "<h2>" . $stmt-> fetchColumn() . "</h2>"; ?>
     </div>
     </section>
     <section class="quote">
