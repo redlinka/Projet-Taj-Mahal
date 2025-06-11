@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="../css/style/headerstyle.css">
   <link rel="stylesheet" href="../css/style/footerstyle.css">
 
-  <?php include_once 'includes/header.php'; ?>
+  <?php include_once '../includes/header.php'; ?>
 
 <!-- Main content -->
 

@@ -1,6 +1,6 @@
 
 </head>
-<?php include '../includes/connexion.php'; ?>
+
 <body>
 
   <header class="header">
