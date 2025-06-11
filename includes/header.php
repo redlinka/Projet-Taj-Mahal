@@ -3,7 +3,7 @@
 
   <header class="header">
     <div class="logo">
-      <img src="../css/img/logo.png" alt="MCN Logo">
+
     </div>
     <div style="display: flex; align-items: center; gap: 1rem;">
       <div class="lang-toggle">fr ▼</div>
