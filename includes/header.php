@@ -1,6 +1,4 @@
-
 </head>
-
 <body>
 
   <header class="header">
