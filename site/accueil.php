@@ -30,12 +30,16 @@
   include_once 'includes/header.php'; 
   ?>
 
-  <?php>$stmt = $cnx->query("SELECT nom_section FROM section WHERE code_section = 'TTLHOME'");?>
+  <?php
+    // Assurez-vous que $cnx est défini, par exemple via include ou require d'un fichier de connexion
+    $stmt = $cnx->query("SELECT nom_section FROM section WHERE code_section = 'TTLHOME'");
+    $row = $stmt ? $stmt->fetch(PDO::FETCH_ASSOC) : null;
+  ?>
   <!-- Main content -->
   <section class="hero">
     <div>
       <h1>Le plus beau mausolée du monde...</h1>
-<?php echo "<h2>" . $stmt-> fetchColumn() . "</h2>"; ?>
+<?php echo "<h2>" . ($row ? htmlspecialchars($row['nom_section']) : '') . "</h2>"; ?>
     </div>
     </section>
     <section class="quote">
