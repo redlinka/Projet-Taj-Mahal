@@ -33,8 +33,9 @@
       background: none;
       border: none;
       color: white;
-      z-index: 1200;
+      z-index: 1100; /* Changed from 1200 to 1100 */
     }
+
 
     /* Sidebar menu */
     .sidebar {
