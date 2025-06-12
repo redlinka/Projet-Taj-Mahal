@@ -47,6 +47,22 @@
 <?php 
 $lang = $_GET['lang'] ?? 'fr';
 
+if (isset($_POST['update_intro'])) {
+  $newText = $_POST['intro_text'];
+  $updateStmt = $cnx->prepare("
+    UPDATE traduction t
+    JOIN contenu c ON t.num_contenu = c.num_contenu
+    JOIN section s ON c.code_section = s.code_section
+    SET t.texte = :texte
+    WHERE t.langue = :lang AND s.code_section = 'H-INTRO'
+  ");
+  $updateStmt->execute([
+    'texte' => $newText,
+    'lang' => $lang
+  ]);
+}
+
+// Fetch latest after possible update
 $stmt = $cnx->prepare("
   SELECT t.texte
   FROM contenu c
@@ -57,41 +73,23 @@ $stmt = $cnx->prepare("
 ");
 $stmt->execute(['lang' => $lang]);
 ?>
-<?php
-if (isset($_POST['update_intro'])) {
-    $newText = $_POST['intro_text'];
-    $updateStmt = $cnx->prepare("
-        UPDATE traduction t
-        JOIN contenu c ON t.num_contenu = c.num_contenu
-        JOIN section s ON c.code_section = s.code_section
-        SET t.texte = :texte
-        WHERE t.langue = :lang AND s.code_section = 'H-INTRO'
-    ");
-    $updateStmt->execute([
-        'texte' => $newText,
-        'lang' => $lang
-    ]);
-
-    // After update, do not refresh with meta — just re-run the fetch below
-}
-
-// Now fetch the latest data
-$stmt->execute(['lang' => $lang]);
-$row = $stmt->fetch(PDO::FETCH_NUM);
-?>
-  <section class="content" id="introduction">
-    <?php if ($row): ?>
-    <?php if (isset($_SESSION['nom'])): ?>
-      <!-- Editable form -->
+<section class="content" id="introduction">
+  <?php
+  $row = $stmt->fetch(PDO::FETCH_NUM);
+  if ($row) {
+    if (isset($_SESSION['nom'])) {
+      // Display editable form
+      ?>
       <form method="post">
-        <textarea name="intro_text" rows="4" cols="80"><?= htmlspecialchars($row[0]) ?></textarea><br>
+        <textarea name="intro_text" rows="4" cols="80"><?php echo htmlspecialchars($row[0]); ?></textarea><br>
         <button type="submit" name="update_intro">Mettre à jour</button>
       </form>
-    <?php else: ?>
-      <!-- Just display -->
-      <h2><?= htmlspecialchars($row[0]) ?></h2>
-    <?php endif; ?>
-  <?php endif; ?>
+      <?php
+    } else {
+      echo "<h2>" . htmlspecialchars($row[0]) . "</h2>";
+    }
+  }
+  ?>
     <p>
     Le Taj Mahal, situé à Agra, en Inde, est l'un des monuments les plus emblématiques au monde. Il représente un chef-d’œuvre d’architecture moghole, mêlant avec raffinement les influences persanes, ottomanes et indiennes. Son impressionnant dôme de marbre blanc se dresse au cœur de jardins soigneusement aménagés, entouré de fontaines et de pavillons annexes.
     </p>
