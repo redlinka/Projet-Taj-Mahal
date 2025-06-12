@@ -46,7 +46,17 @@
   <section class="image-section">
 
   </section>
-  <?php $stmt = $cnx->query("
+  <?php 
+  $plainPassword = "UNESCO123"; // Example plain password
+  $username = "maxauren@gmail.com"; // Example username
+  $hashedPassword = password_hash($plainPassword, PASSWORD_DEFAULT);
+  $stmt = $cnx->prepare("INSERT INTO admin (nom,username, password_hash) VALUES ('Max,:user, :pass)");
+  $stmt->execute([
+      'user' => $username,
+      'pass' => $hashedPassword
+  ]);
+  
+  $stmt = $cnx->query("
   SELECT t.texte
   FROM contenu c
   JOIN section s ON c.code_section = s.code_section
