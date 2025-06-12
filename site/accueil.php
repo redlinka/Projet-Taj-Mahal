@@ -46,9 +46,21 @@
   <section class="image-section">
 
   </section>
-  <?php $stmt = $cnx->query("SELECT texte FROM traduction WHERE langue = 'fr' AND num_contenu = 1"); ?>
+  <?php $stmt = $cnx->query("
+  SELECT t.texte
+  FROM contenu c
+  JOIN section s ON c.code_section = s.code_section
+  JOIN traduction t ON c.num_contenu = t.num_contenu
+  WHERE t.langue = 'fr' AND s.code_section = 'H-INTRO'
+  ORDER BY c.ordre::int
+"); ?>
   <section class="content" id="introduction">
-    <?php echo "<h3>" . $stmt->fetchColumn() . "</h3>"; ?>
+    <?php
+    $row = $stmt->fetch(PDO::FETCH_NUM);
+    if ($row) {
+      echo "<h2>" . $row[0] . "</h2>";
+    }
+    ?>
     <p>
     Le Taj Mahal, situé à Agra, en Inde, est l'un des monuments les plus emblématiques au monde. Il représente un chef-d’œuvre d’architecture moghole, mêlant avec raffinement les influences persanes, ottomanes et indiennes. Son impressionnant dôme de marbre blanc se dresse au cœur de jardins soigneusement aménagés, entouré de fontaines et de pavillons annexes.
     </p>
