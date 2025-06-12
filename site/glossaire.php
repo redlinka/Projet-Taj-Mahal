@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="../css/style/headerstyle.css" />
   <link rel="stylesheet" href="../css/style/footerstyle.css" />
   
-  <?php include_once 'includes/header.php'; ?>
+  <?php include_once '../includes/header.php'; ?>
 
 <!-- Main content -->
 
@@ -162,6 +162,6 @@
     <img src="../css/img/img_glossaire/iwan.png" alt="Iwan">
   </div>
 </div>
-<?php include_once 'includes/footer.php'; ?>
+<?php include_once '../includes/footer.php'; ?>
 
 </html>
