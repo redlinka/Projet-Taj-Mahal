@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../css/style/glossairestyle.css" />
   <link rel="stylesheet" href="../css/style/headerstyle.css" />
   <link rel="stylesheet" href="../css/style/footerstyle.css" />
-  <title>Glossaire - M.C.N.</title>
+  <title>Crédits | Taj Mahal</title>
   <style>
     * {
       margin: 0;
@@ -164,7 +164,7 @@
       <p>Chargé de développement et de recherche</p>
     </div>
     <div class="image-wrapper">
-      <img src="img_credits/rayan.png" alt="Rayan">
+      <img src="/css/img/img_credits/rayan.png" alt="Rayan">
     </div>
   </div>
 
@@ -175,7 +175,7 @@
       <p>Chargée de Communication</p>
     </div>
     <div class="image-wrapper">
-      <img src="img_credits/loane.png" alt="Loane">
+      <img src="/css/img/img_credits/loane.png" alt="Loane">
     </div>
   </div>
 
@@ -183,10 +183,10 @@
   <div class="section image-left">
     <div class="text">
       <h2>SISSOKO Bakary</h2>
-      <p>Chargé de développement et de recherche</p>
+      <p>Chargé de recherche</p>
     </div>
     <div class="image-wrapper">
-      <img src="img_credits/bakary.png" alt="Bakary">
+      <img src="/css/img/img_credits/bakary.png" alt="Bakary">
     </div>
   </div>
 
@@ -197,7 +197,7 @@
       <p>Contenu et planification</p>
     </div>
     <div class="image-wrapper">
-      <img src="img_credits/yanis.png" alt="Yanis">
+      <img src="/css/img/img_credits/yanis.png" alt="Yanis">
     </div>
   </div>
 
@@ -208,7 +208,7 @@
       <p>Charge de la mise en ligne du site, contenu et recherche</p>
     </div>
     <div class="image-wrapper">
-      <img src="img_credits/adam.png" alt="Adam">
+      <img src="/css/img/img_credits/adam.png" alt="Adam">
     </div>
   </div>
 
