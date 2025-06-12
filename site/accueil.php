@@ -32,7 +32,7 @@
   <!-- Main content -->
   <section class="hero">
     <div>
-      <h1>Le plus beau mausolée du monde...</h1>
+      <h1>Le plus beau mausolée du monde..</h1>
       <?php echo "<h2>" . $stmt->fetchColumn() . "</h2>"; ?>
     </div>
   </section>
