@@ -65,7 +65,7 @@ $stmt->execute(['lang' => $lang]);
         // Display editable form
         ?>
         <form method="post">
-          <textarea name="intro_text" rows="4" cols="80"><?php echo htmlspecialchars($row[0]); ?></textarea><br>
+          <textarea name="intro_text" rows="4" cols="80"><?php echo $row[0]; ?></textarea><br>
           <button type="submit" name="update_intro">Mettre à jour</button>
         </form>
         <?php

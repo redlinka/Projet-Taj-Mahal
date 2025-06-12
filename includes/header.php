@@ -1,6 +1,8 @@
 
 </head>
-<?php include '../includes/connexion.php'; ?>
+<?php include '../includes/connexion.php'; 
+session_start();
+?>
 <body>
 
   <header class="header">
