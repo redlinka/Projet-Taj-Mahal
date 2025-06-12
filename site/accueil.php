@@ -35,8 +35,8 @@
       <h1>Le plus beau mausolée du monde...</h1>
       <?php echo "<h2>" . $stmt->fetchColumn() . "</h2>"; ?>
     </div>
-    </section>
-    <section class="quote">
+  </section>
+  <section class="quote">
     <blockquote>
     “Le Taj Mahal s'élève au-dessus des rives du fleuve comme une larme solitaire suspendue sur la joue du temps.”<br><br>
     <cite>- Rabindranath Tagore</cite>
@@ -46,9 +46,9 @@
   <section class="image-section">
 
   </section>
-  
+  <?php $stmt = $cnx->query("SELECT texte FROM traduction WHERE langue = 'fr' AND num_contenu = 1"); ?>
   <section class="content" id="introduction">
-    <h2>Taj Mahal,<br>La Couronne du Palais…</h2>
+    <?php echo "<h2>" . $stmt->fetchColumn() . "</h2>"; ?>
     <p>
     Le Taj Mahal, situé à Agra, en Inde, est l'un des monuments les plus emblématiques au monde. Il représente un chef-d’œuvre d’architecture moghole, mêlant avec raffinement les influences persanes, ottomanes et indiennes. Son impressionnant dôme de marbre blanc se dresse au cœur de jardins soigneusement aménagés, entouré de fontaines et de pavillons annexes.
     </p>
