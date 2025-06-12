@@ -33,7 +33,7 @@
   <section class="hero">
     <div>
       <h1>Le plus beau mausolée du monde...</h1>
-      <?php echo "<h2>" . $stmt->fetchColumn() . "</h2>"; ?>
+      <?php echo "<h1>" . $stmt->fetchColumn() . "</h1>"; ?>
     </div>
   </section>
   <section class="quote">
