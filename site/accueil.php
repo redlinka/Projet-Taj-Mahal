@@ -47,17 +47,6 @@
 
   </section>
 <?php 
-$plainPassword = "UNESCO123"; // Plain text password
-$username = "maxauren@gmail.com"; // User's login
-$hashedPassword = password_hash($plainPassword, PASSWORD_DEFAULT);
-
-// Prepare statement — ALL values should be parameterized
-$stmt = $cnx->prepare("INSERT INTO admin (nom, login, password) VALUES (:nom, :user, :pass)");
-$stmt->execute([
-    'nom' => 'Max', // Add this
-    'user' => $username,
-    'pass' => $hashedPassword
-]);
   $stmt = $cnx->query("
   SELECT t.texte
   FROM contenu c
@@ -201,6 +190,6 @@ $stmt->execute([
   </div>
 </section>
 
-</body>
+  <?php include_once '../includes/footer.php'; ?>
 
 </html>

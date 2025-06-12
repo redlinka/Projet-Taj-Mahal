@@ -1,6 +1,7 @@
 CREATE TABLE SECTION (code_section CHAR(7) PRIMARY KEY, nom_section VARCHAR(50));
 CREATE TABLE CONTENU (num_contenu INT PRIMARY KEY, code_section CHAR(7), ordre VARCHAR(50), FOREIGN KEY (code_section) REFERENCES SECTION(code_section));
 CREATE TABLE TRADUCTION (num_contenu INT, langue CHAR(2), texte TEXT, PRIMARY KEY (num_contenu, langue), FOREIGN KEY (num_contenu) REFERENCES CONTENU(num_contenu));
+CREATE TABLE ADMIN (nom VARCHAR(50), login VARCHAR(50) PRIMARY KEY, password TEXT);
 
 INSERT INTO section (code_section, nom_section) VALUES ('H-TITLE', 'Home title');
 INSERT INTO section (code_section, nom_section) VALUES ('H-QUOTE', 'Introduction Quote');
@@ -19,3 +20,16 @@ INSERT INTO section (code_section, nom_section) VALUES ('1666', 'Death of Shah J
 INSERT INTO section (code_section, nom_section) VALUES ('1857', 'End of Moghol Empire');
 INSERT INTO section (code_section, nom_section) VALUES ('1908', 'Restauration of the Taj Mahal');
 INSERT INTO section (code_section, nom_section) VALUES ('1983', 'Taj Mahal recognized by UNESCO');
+
+/*
+$plainPassword = "UNESCO123";
+$username = "maxauren@gmail.com";
+$hashedPassword = password_hash($plainPassword, PASSWORD_DEFAULT);
+
+$stmt = $cnx->prepare("INSERT INTO admin (nom, login, password) VALUES (:nom, :user, :pass)");
+$stmt->execute([
+    'nom' => 'Max', 
+    'user' => $username,
+    'pass' => $hashedPassword
+]);
+*/
