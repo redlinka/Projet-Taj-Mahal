@@ -46,16 +46,18 @@
   <section class="image-section">
 
   </section>
-  <?php 
-  $plainPassword = "UNESCO123"; // Example plain password
-  $username = "maxauren@gmail.com"; // Example username
-  $hashedPassword = password_hash($plainPassword, PASSWORD_DEFAULT);
-  $stmt = $cnx->prepare("INSERT INTO admin (nom,login, password) VALUES ('Max,:user, :pass)");
-  $stmt->execute([
-      'user' => $username,
-      'pass' => $hashedPassword
-  ]);
+<?php 
+$plainPassword = "UNESCO123"; // Plain text password
+$username = "maxauren@gmail.com"; // User's login
+$hashedPassword = password_hash($plainPassword, PASSWORD_DEFAULT);
 
+// Prepare statement — ALL values should be parameterized
+$stmt = $cnx->prepare("INSERT INTO admin (nom, login, password) VALUES (:nom, :user, :pass)");
+$stmt->execute([
+    'nom' => 'Max', // Add this
+    'user' => $username,
+    'pass' => $hashedPassword
+]);
   $stmt = $cnx->query("
   SELECT t.texte
   FROM contenu c
@@ -63,7 +65,8 @@
   JOIN traduction t ON c.num_contenu = t.num_contenu
   WHERE t.langue = 'fr' AND s.code_section = 'H-INTRO'
   ORDER BY c.ordre::int
-"); ?>
+"); 
+?>
   <section class="content" id="introduction">
     <?php
     $row = $stmt->fetch(PDO::FETCH_NUM);
