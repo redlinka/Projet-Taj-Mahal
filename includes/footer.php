@@ -25,6 +25,7 @@
                     // on connecte l'utilisateur en mettant ces 
                     // credantials dans la session 
                     $_SESSION['nom'] = $user['nom'];
+                    echo "<p class='success'>Bienvenue, " . htmlspecialchars($user['nom']) . " !</p>";
 
                     header('refresh:0');
                 }
