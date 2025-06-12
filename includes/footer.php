@@ -1,11 +1,23 @@
         <footer>
-            <form method="POST" action="">        <h2>Connexion</h2>
-            <label for="login">Nom d'utilisateur ou adresse mail</label><br>
-            <input type="text" name="login" placeholder="Entrez votre login..."  id="login" required><br><br>
-            <label for="login">Mot de passe</label><br>
-            <input type="password" name="password" placeholder="Entrez votre mot de passe..." id="pass" required><br><br>
-            <input type="submit" value="Se connecter" id="submitBtn">
-        </form>
+            <div>
+                <form method="POST" action="">        <h2>Connexion</h2>
+                    <label for="login">Nom d'utilisateur ou adresse mail</label><br>
+                    <input type="text" name="login" placeholder="Entrez votre login..."  id="login" required><br><br>
+                    <label for="login">Mot de passe</label><br>
+                    <input type="password" name="password" placeholder="Entrez votre mot de passe..." id="pass" required><br><br>
+                    <input type="submit" value="Se connecter" id="submitBtn">
+                </form>
+                <div class="contact">
+                    <h2>Contact</h2>
+                    <a href="mailto:nachnouchiadam@gmail.com">unesco.tajmahal@gmail.com</a>
+                </div>
+                <div class="socials">
+                    <h2>Socials</h2>
+                    <a href="https://www.instagram.com/unesco" target="_blank">Instagram</a>
+                </div>            
+
+            </div>
+            <h1>UNESCO</h1>
         <?php
             session_start();
 

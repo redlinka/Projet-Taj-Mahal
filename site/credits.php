@@ -207,5 +207,6 @@
       <img src="img_credits/adam.png" alt="Adam">
     </div>
   </div>
-</body>
+  
+<?php include_once '../includes/footer.php'; ?>
 </html>

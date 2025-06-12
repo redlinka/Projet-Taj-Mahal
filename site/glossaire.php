@@ -151,9 +151,8 @@
       <img src="../css/img/img_glossaire/chhatri.png" alt="Chhatri">
     </div>
   </div>
-</body>
 
-<div class="section image-left">
+  <div class="section image-left">
   <div class="text">
     <h2>Iwan</h2>
     <p>Grande arche voûtée encadrant une ouverture, élément central dans l’architecture islamique.
@@ -163,5 +162,6 @@
     <img src="../css/img/img_glossaire/iwan.png" alt="Iwan">
   </div>
 </div>
+<?php include_once 'includes/footer.php'; ?>
 
 </html>
