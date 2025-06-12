@@ -26,12 +26,33 @@
   <link rel="stylesheet" href="../css/style/headerstyle.css">
   <link rel="stylesheet" href="../css/style/footerstyle.css">
     
-  <?php include_once '../includes/header.php'; ?>
+  <?php include_once '../includes/header.php'; 
+      $stmt = $cnx->prepare("
+      SELECT t.texte
+      FROM contenu c
+      JOIN section s ON c.code_section = s.code_section
+      JOIN traduction t ON c.num_contenu = t.num_contenu
+      WHERE t.langue = :lang AND s.code_section = 'H-TITLE'
+      ORDER BY c.ordre::int
+    ");
+    $stmt->execute(['lang' => $lang]);
+  ?>
+  
 
   <!-- Main content -->
   <section class="hero">
     <div>
-      <h1>Le plus beau mausolée du monde...</h1>
+      <?php
+    $row = $stmt->fetch(PDO::FETCH_NUM);
+    if (isset($_SESSION['nom'])) {
+      echo "<h2>Bienvenue, " . htmlspecialchars($_SESSION['nom']) . " !</h2>";
+    } else {
+      echo "<h2>Introduction</h2>";
+    }
+    if ($row) {
+      echo "<h2>" . $row[0] . "</h2>";
+    }
+    ?>
     </div>
   </section>
   <section class="quote">
@@ -45,15 +66,6 @@
 
   </section>
 <?php 
-// Start session if not already started
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
-
-// Include or initialize your database connection here if not already done
-// Example: require_once '../includes/db.php'; // Make sure $cnx is set
-
-$lang = $_GET['lang'] ?? 'fr';
 
 $stmt = $cnx->prepare("
   SELECT t.texte
@@ -61,7 +73,7 @@ $stmt = $cnx->prepare("
   JOIN section s ON c.code_section = s.code_section
   JOIN traduction t ON c.num_contenu = t.num_contenu
   WHERE t.langue = :lang AND s.code_section = 'H-INTRO'
-  ORDER BY c.ordre
+  ORDER BY c.ordre::int
 ");
 $stmt->execute(['lang' => $lang]);
 ?>
@@ -69,35 +81,12 @@ $stmt->execute(['lang' => $lang]);
     <?php
     $row = $stmt->fetch(PDO::FETCH_NUM);
     if (isset($_SESSION['nom'])) {
-      // Show form to edit the entry
-      echo '<form method="post">';
-      echo '<textarea name="texte" rows="4" cols="50">' . htmlspecialchars($row[0]) . '</textarea><br>';
-      echo '<input type="submit" name="update" value="Mettre à jour">';
-      echo '</form>';
-
-      if (isset($_POST['update'])) {
-      $newTexte = $_POST['texte'];
-      // Update the traduction table
-      $updateStmt = $cnx->prepare("
-        UPDATE traduction t
-        JOIN contenu c ON t.num_contenu = c.num_contenu
-        JOIN section s ON c.code_section = s.code_section
-        SET t.texte = :texte
-        WHERE t.langue = :lang AND s.code_section = 'H-INTRO'
-      ");
-      $updateStmt->execute([
-        'texte' => $newTexte,
-        'lang' => $lang
-      ]);
-      // Refresh to show updated content
-      header("Location: " . $_SERVER['REQUEST_URI']);
-      exit;
-      }
+      echo "<h2>Bienvenue, " . htmlspecialchars($_SESSION['nom']) . " !</h2>";
     } else {
-      // Just show the row
-      if ($row) {
-      echo "<h2>" . htmlspecialchars($row[0]) . "</h2>";
-      }
+      echo "<h2>Introduction</h2>";
+    }
+    if ($row) {
+      echo "<h2>" . $row[0] . "</h2>";
     }
     ?>
     <p>

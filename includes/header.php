@@ -2,6 +2,7 @@
 </head>
 <?php include '../includes/connexion.php'; 
 session_start();
+$lang = $_GET['lang'] ?? 'fr';
 ?>
 <body>
 
