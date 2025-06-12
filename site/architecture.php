@@ -31,7 +31,7 @@
         <div class="up">
             <h2>L’organisation spatiale</h2>
             <p>
-                L’ensemble du site est conçu selon des principes de symétrie typiques de l’Empire moghol. Le plan du monument intègre les différents éléments – minarets, dômes et espaces de circulation – afin de guider naturellement la visite. Le résultat est une distribution harmonieuse qui permet aux visiteurs de comprendre la structure tout en découvrant les subtilités architecturales, telles que les détails réalisés en multiani mitti lors des restaurations.
+                L’ensemble du site est conçu selon des principes de symétrie typiques de l’Empire moghol. Le plan du monument intègre les différents éléments – <a href="glossaire.php#minarets">minarets</a>, dômes et espaces de circulation – afin de guider naturellement la visite. Le résultat est une distribution harmonieuse qui permet aux visiteurs de comprendre la structure tout en découvrant les subtilités architecturales, telles que les détails réalisés en multiani mitti lors des restaurations.
             </p>
         </div>
         

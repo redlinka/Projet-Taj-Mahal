@@ -56,7 +56,7 @@
   </div>
 
   <!--Minarets-->
-  <div class="section image-left">
+  <div class="section image-left" id="minarets">
     <div class="text">
       <h2>Minarets</h2>
       <p>Tours élancées traditionnellement associées aux mosquées. Les quatre minarets du Taj Mahal encadrent le
