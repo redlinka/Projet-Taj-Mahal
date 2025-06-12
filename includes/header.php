@@ -8,7 +8,13 @@
       <img src="../css/img/logo.png" alt="MCN Logo">
     </div>
     <div style="display: flex; align-items: center; gap: 1rem;">
-      <div class="lang-toggle">fr ▼</div>
+      <form method="get" id="langForm" style="margin: 0;">
+        <select name="lang" onchange="document.getElementById('langForm').submit();" style="padding: 0.2rem 0.5rem;">
+          <option value="fr" <?php if(isset($_GET['lang']) && $_GET['lang'] == 'fr') echo 'selected'; ?>>fr</option>
+          <option value="en" <?php if(isset($_GET['lang']) && $_GET['lang'] == 'en') echo 'selected'; ?>>en</option>
+          <!-- Add more languages as needed -->
+        </select>
+      </form>
       <button class="hamburger" id="hamburgerBtn">☰</button>
     </div>
   </header>
