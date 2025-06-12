@@ -1,5 +1,5 @@
     footer {
-        background-color: #444; /* dark grey */
+        background-color: #262525; /* dark grey */
         color: white;
         font-family: 'ABeeZee', sans-serif;
         padding: 2rem;
@@ -12,9 +12,10 @@
     footer h1 {
         width: 100%;
         text-align: center;
-        color: black;
-        font-size: 2rem;
+        color: #383737;
+        font-size: 8rem;
         margin-top: 2rem;
+        font-family: 'Ysabeau', serif;
     }
 
     footer h2 {

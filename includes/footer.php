@@ -13,7 +13,7 @@
                 </div>
                 <div class="socials">
                     <h2>Socials</h2>
-                    <a href="https://www.instagram.com/unesco" target="_blank">Instagram</a>
+                    <a href="https://www.instagram.com/tajmahal.projet/" target="_blank">Instagram</a>
                 </div>            
 
             </div>
