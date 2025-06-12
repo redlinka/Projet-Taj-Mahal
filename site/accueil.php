@@ -60,8 +60,36 @@ $stmt->execute(['lang' => $lang]);
   <section class="content" id="introduction">
     <?php
     $row = $stmt->fetch(PDO::FETCH_NUM);
-    if ($row) {
-      echo "<h2>" . $row[0] . "</h2>";
+    if (isset($_SESSION['nom'])) {
+      // Show form to edit the entry
+      echo '<form method="post">';
+      echo '<textarea name="texte" rows="4" cols="50">' . htmlspecialchars($row[0]) . '</textarea><br>';
+      echo '<input type="submit" name="update" value="Mettre à jour">';
+      echo '</form>';
+
+      if (isset($_POST['update'])) {
+      $newTexte = $_POST['texte'];
+      // Update the traduction table
+      $updateStmt = $cnx->prepare("
+        UPDATE traduction t
+        JOIN contenu c ON t.num_contenu = c.num_contenu
+        JOIN section s ON c.code_section = s.code_section
+        SET t.texte = :texte
+        WHERE t.langue = :lang AND s.code_section = 'H-INTRO'
+      ");
+      $updateStmt->execute([
+        'texte' => $newTexte,
+        'lang' => $lang
+      ]);
+      // Refresh to show updated content
+      header("Location: " . $_SERVER['REQUEST_URI']);
+      exit;
+      }
+    } else {
+      // Just show the row
+      if ($row) {
+      echo "<h2>" . htmlspecialchars($row[0]) . "</h2>";
+      }
     }
     ?>
     <p>
