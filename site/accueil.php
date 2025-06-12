@@ -27,13 +27,11 @@
   <link rel="stylesheet" href="../css/style/footerstyle.css">
     
   <?php include_once '../includes/header.php'; ?>
-  <?php $stmt = $cnx->query("SELECT nom_section FROM section WHERE code_section = 'TTLHOME'"); ?>
 
   <!-- Main content -->
   <section class="hero">
     <div>
       <h1>Le plus beau mausolée du monde...</h1>
-      <?php echo "<h2>" . $stmt->fetchColumn() . "</h2>"; ?>
     </div>
   </section>
   <section class="quote">
@@ -47,14 +45,17 @@
 
   </section>
 <?php 
-  $stmt = $cnx->query("
+$lang = $_GET['lang'] ?? 'fr';
+
+$stmt = $cnx->prepare("
   SELECT t.texte
   FROM contenu c
   JOIN section s ON c.code_section = s.code_section
   JOIN traduction t ON c.num_contenu = t.num_contenu
-  WHERE t.langue = 'fr' AND s.code_section = 'H-INTRO'
+  WHERE t.langue = :lang AND s.code_section = 'H-INTRO'
   ORDER BY c.ordre::int
-"); 
+");
+$stmt->execute(['lang' => $lang]);
 ?>
   <section class="content" id="introduction">
     <?php

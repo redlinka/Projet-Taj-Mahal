@@ -18,4 +18,7 @@
         echo $e;
         echo phpinfo();
     }
+    if (!isset($_GET['lang'])) {
+        $_GET['lang'] = 'fr';
+    }
 ?>
