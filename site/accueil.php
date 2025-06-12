@@ -46,11 +46,13 @@
     $row = $stmt->fetch(PDO::FETCH_NUM);
     if (isset($_SESSION['nom'])) {
       echo "<h2>Bienvenue, " . htmlspecialchars($_SESSION['nom']) . " !</h2>";
-    } else {
-      echo "<h2>Introduction</h2>";
+      if ($row) {
+      echo "<h1>" . $row[0] . "</h1>";
     }
-    if ($row) {
-      echo "<h2>" . $row[0] . "</h2>";
+    } else {
+      if ($row) {
+      echo "<h1>" . $row[0] . "</h1>";
+    }
     }
     ?>
     </div>
@@ -80,11 +82,6 @@ $stmt->execute(['lang' => $lang]);
   <section class="content" id="introduction">
     <?php
     $row = $stmt->fetch(PDO::FETCH_NUM);
-    if (isset($_SESSION['nom'])) {
-      echo "<h2>Bienvenue, " . htmlspecialchars($_SESSION['nom']) . " !</h2>";
-    } else {
-      echo "<h2>Introduction</h2>";
-    }
     if ($row) {
       echo "<h2>" . $row[0] . "</h2>";
     }
