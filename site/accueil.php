@@ -47,22 +47,6 @@
 <?php 
 $lang = $_GET['lang'] ?? 'fr';
 
-if (isset($_POST['update_intro'])) {
-  $newText = $_POST['intro_text'];
-  $updateStmt = $cnx->prepare("
-    UPDATE traduction t
-    JOIN contenu c ON t.num_contenu = c.num_contenu
-    JOIN section s ON c.code_section = s.code_section
-    SET t.texte = :texte
-    WHERE t.langue = :lang AND s.code_section = 'H-INTRO'
-  ");
-  $updateStmt->execute([
-    'texte' => $newText,
-    'lang' => $lang
-  ]);
-}
-
-// Fetch latest after possible update
 $stmt = $cnx->prepare("
   SELECT t.texte
   FROM contenu c
@@ -73,23 +57,40 @@ $stmt = $cnx->prepare("
 ");
 $stmt->execute(['lang' => $lang]);
 ?>
-<section class="content" id="introduction">
-  <?php
-  $row = $stmt->fetch(PDO::FETCH_NUM);
-  if ($row) {
-    if (isset($_SESSION['nom'])) {
-      // Display editable form
-      ?>
-      <form method="post">
-        <textarea name="intro_text" rows="4" cols="80"><?php echo htmlspecialchars($row[0]); ?></textarea><br>
-        <button type="submit" name="update_intro">Mettre à jour</button>
-      </form>
-      <?php
-    } else {
-      echo "<h2>" . htmlspecialchars($row[0]) . "</h2>";
+  <section class="content" id="introduction">
+    <?php
+    $row = $stmt->fetch(PDO::FETCH_NUM);
+    if ($row) {
+      if (isset($_SESSION['nom'])) {
+        // Display editable form
+        ?>
+        <form method="post">
+          <textarea name="intro_text" rows="4" cols="80"><?php echo htmlspecialchars($row[0]); ?></textarea><br>
+          <button type="submit" name="update_intro">Mettre à jour</button>
+        </form>
+        <?php
+        if (isset($_POST['update_intro'])) {
+          $newText = $_POST['intro_text'];
+          // Update the database with the new text
+          $updateStmt = $cnx->prepare("
+            UPDATE traduction t
+            JOIN contenu c ON t.num_contenu = c.num_contenu
+            JOIN section s ON c.code_section = s.code_section
+            SET t.texte = :texte
+            WHERE t.langue = :lang AND s.code_section = 'H-INTRO'
+          ");
+          $updateStmt->execute([
+            'texte' => $newText,
+            'lang' => $lang
+          ]);
+          // Refresh to show updated text
+          echo "<meta http-equiv='refresh' content='0'>";
+        }
+      } else {
+        echo "<h2>" . htmlspecialchars($row[0]) . "</h2>";
+      }
     }
-  }
-  ?>
+    ?>
     <p>
     Le Taj Mahal, situé à Agra, en Inde, est l'un des monuments les plus emblématiques au monde. Il représente un chef-d’œuvre d’architecture moghole, mêlant avec raffinement les influences persanes, ottomanes et indiennes. Son impressionnant dôme de marbre blanc se dresse au cœur de jardins soigneusement aménagés, entouré de fontaines et de pavillons annexes.
     </p>
