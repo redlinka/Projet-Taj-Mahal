@@ -4,6 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Pixelify+Sans:wght@400..700&family=Ysabeau+SC:wght@1..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style/glossairestyle.css" />
+  <link rel="stylesheet" href="../css/style/headerstyle.css" />
+  <link rel="stylesheet" href="../css/style/footerstyle.css" />
   <title>Glossaire - M.C.N.</title>
   <style>
     * {
@@ -207,6 +211,6 @@
       <img src="img_credits/adam.png" alt="Adam">
     </div>
   </div>
-  
+
 <?php include_once '../includes/footer.php'; ?>
 </html>
