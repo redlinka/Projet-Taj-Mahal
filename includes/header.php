@@ -32,6 +32,7 @@ $lang = $_GET['lang'] ?? 'fr';
     <li><a href="/site/accueil.php#histoire" style="color: inherit; text-decoration: none;">Histoire</a></li>
     <li><a href="/site/architecture.php" style="color: inherit; text-decoration: none;">Architecture</a></li>
     <li><a href="/site/glossaire.php" style="color: inherit; text-decoration: none;">Glossaire</a></li>
+    <li><a href="/site/chronologie.php" style="color: inherit; text-decoration: none;">Chronologie</a></li>
     <li><a href="/site/credits.php" style="color: inherit; text-decoration: none;">Crédits</a></li>
     </ul>
   </div>
