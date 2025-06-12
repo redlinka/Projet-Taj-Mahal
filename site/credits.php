@@ -153,7 +153,7 @@
       <p> Ce site web a été réalisé dans le cadre d’un projet universitaire mené en partenariat avec l’UNESCO. Il s’inscrit dans un exercice de mise en situation professionnelle, visant à développer nos compétences en gestion de projet, communication numérique, accessibilité et médiation culturelle. Notre objectif est de proposer une plateforme claire, accessible et enrichissante pour tous les publics — voyageurs, curieux, chercheurs ou simples passionnés d’histoire — souhaitant découvrir le Taj Mahal autrement, que ce soit avant, pendant ou après leur visite.</p>
     </div>
     <div class="image-wrapper">
-      <img src="../css/img/img_credits/img_credits/unesco.png" alt="UNESCO">
+      <img src="img_credits/unesco.png" alt="UNESCO">
     </div>
   </div>
 
