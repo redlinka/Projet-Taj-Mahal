@@ -17,7 +17,7 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'ABeeZee', sans-serif;
       background-color: #1E1E1E;
       color: white;
     }
