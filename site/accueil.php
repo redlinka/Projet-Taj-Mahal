@@ -46,22 +46,39 @@
     $row = $stmt->fetch(PDO::FETCH_NUM);
     if (isset($_SESSION['nom'])) {
       echo "<h1>Bienvenue, " . htmlspecialchars($_SESSION['nom']) . " !</h1>";
-    }
-    if ($row) {
-      $texte = $row[0];
-    } else {
-      $texte = '';
-    }
-    ?>
-    <form method="post" action="">
-      <textarea name="user_text" rows="4" cols="50" placeholder="Votre texte ici..."><?php echo htmlspecialchars($texte); ?></textarea>
-      <br>
-      <button type="submit">Envoyer</button>
-    </form>
-    <?php
-    if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['user_text'])) {
-      echo "<p>Vous avez écrit : " . htmlspecialchars($_POST['user_text']) . "</p>";
-    
+      if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['new_text'])) {
+        $newText = $_POST['new_text'];
+        // Get num_contenu for the current row
+        $stmtNum = $cnx->prepare("
+          SELECT t.num_contenu
+          FROM contenu c
+          JOIN section s ON c.code_section = s.code_section
+          JOIN traduction t ON c.num_contenu = t.num_contenu
+          WHERE t.langue = :lang AND s.code_section = 'H-TITLE'
+          ORDER BY c.ordre::int
+          LIMIT 1
+        ");
+        $stmtNum->execute(['lang' => $lang]);
+        $numContenu = $stmtNum->fetchColumn();
+
+        if ($numContenu) {
+          $stmtUpdate = $cnx->prepare("UPDATE traduction SET texte = :texte WHERE num_contenu = :num_contenu AND langue = :lang");
+          $stmtUpdate->execute([
+            'texte' => $newText,
+            'num_contenu' => $numContenu,
+            'lang' => $lang
+          ]);
+          // Refresh to show updated text
+          header("Location: " . $_SERVER['REQUEST_URI']);
+          exit;
+        }
+      }
+      ?>
+      <form method="post">
+        <textarea name="new_text" rows="3" cols="60"><?php echo htmlspecialchars($row[0]); ?></textarea><br>
+        <button type="submit">Mettre à jour</button>
+      </form>
+      <?php
     } else {
       if ($row) {
       echo "<h1>" . $row[0] . "</h1>";
