@@ -46,9 +46,22 @@
     $row = $stmt->fetch(PDO::FETCH_NUM);
     if (isset($_SESSION['nom'])) {
       echo "<h1>Bienvenue, " . htmlspecialchars($_SESSION['nom']) . " !</h1>";
-      if ($row) {
-      echo "<h1>" . $row[0] . "</h1>";
     }
+    if ($row) {
+      $texte = $row[0];
+    } else {
+      $texte = '';
+    }
+    ?>
+    <form method="post" action="">
+      <textarea name="user_text" rows="4" cols="50" placeholder="Votre texte ici..."><?php echo htmlspecialchars($texte); ?></textarea>
+      <br>
+      <button type="submit">Envoyer</button>
+    </form>
+    <?php
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['user_text'])) {
+      echo "<p>Vous avez écrit : " . htmlspecialchars($_POST['user_text']) . "</p>";
+    
     } else {
       if ($row) {
       echo "<h1>" . $row[0] . "</h1>";
