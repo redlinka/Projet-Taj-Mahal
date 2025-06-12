@@ -45,6 +45,14 @@
 
   </section>
 <?php 
+// Start session if not already started
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+// Include or initialize your database connection here if not already done
+// Example: require_once '../includes/db.php'; // Make sure $cnx is set
+
 $lang = $_GET['lang'] ?? 'fr';
 
 $stmt = $cnx->prepare("
@@ -53,7 +61,7 @@ $stmt = $cnx->prepare("
   JOIN section s ON c.code_section = s.code_section
   JOIN traduction t ON c.num_contenu = t.num_contenu
   WHERE t.langue = :lang AND s.code_section = 'H-INTRO'
-  ORDER BY c.ordre::int
+  ORDER BY c.ordre
 ");
 $stmt->execute(['lang' => $lang]);
 ?>
