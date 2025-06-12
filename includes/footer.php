@@ -1,6 +1,5 @@
         <footer>
-            <form method="POST" action="connexion.php">
-            <h2>Connexion</h2>
+            <form method="POST" action="">        <h2>Connexion</h2>
             <label for="login">Nom d'utilisateur ou adresse mail</label><br>
             <input type="text" name="login" placeholder="Entrez votre login..."  id="login" required><br><br>
             <label for="login">Mot de passe</label><br>
